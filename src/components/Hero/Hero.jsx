@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
@@ -26,7 +27,7 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
+            {title || 'Hi, my name is'}
             <span className="text-color-main">{name || 'Your Name'}</span>
             <br />
             {subtitle || "I'm the Unknown Developer."}

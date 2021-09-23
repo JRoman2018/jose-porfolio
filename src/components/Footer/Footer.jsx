@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';

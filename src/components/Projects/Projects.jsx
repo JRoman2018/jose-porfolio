@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
@@ -29,7 +30,6 @@ const Projects = () => {
           <Title title="Projects" />
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, id } = project;
-            console.log(img)
             return (
               <Row key={id}>
                 <Col lg={4} sm={12}>
@@ -51,13 +51,14 @@ const Projects = () => {
                       </div>
                       {url && (
                         <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cta-btn cta-btn--hero"
+                          href={url || '#!'}
                         >
                           See Live
-                        </a>)}
+                        </a>
+                      )}
 
                       {repo && (
                         <a

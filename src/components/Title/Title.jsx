@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import PropTypes from 'prop-types';
