@@ -23,13 +23,34 @@ const Projects = () => {
     }
   }, []);
 
+  const textColorProp = (propV) => {
+    switch (propV) {
+      case 'Laravel':
+        return 'bg-danger';
+      case 'Bootstrap':
+        return 'bg-secondary';
+      case 'Axios':
+        return 'bg-info';
+      case 'JavaScript':
+        return 'bg-warning';
+      case 'ReactJs':
+        return 'bg-primary';
+      case 'Redux':
+        return 'bg-success';
+      case 'CSS':
+        return 'bg-dark';
+      default:
+        return 'bg-secondary';
+    }
+  };
+
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, info2, url, repo, img, id, langs } = project;
             return (
               <Row key={id}>
                 <Col lg={4} sm={12}>
@@ -43,6 +64,19 @@ const Projects = () => {
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
                       <div>
+                        <p>
+                          {langs.length > 0 &&
+                            langs.map((lang) => {
+                              return (
+                                <span
+                                  key={lang.id}
+                                  className={`badge ${textColorProp(lang.label)} text-white mr-1`}
+                                >
+                                  {lang.label}
+                                </span>
+                              );
+                            })}
+                        </p>
                         <p>
                           {info ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}

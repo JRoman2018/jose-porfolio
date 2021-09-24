@@ -37,6 +37,13 @@ export const projectsData = [
       'This was my graduation project, which is in charge of administering a device in charge of supplying medicine from the website..',
     info2: '',
     url: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'Laravel' },
+      { id: 4, label: 'Bootstrap' },
+      { id: 5, label: 'Axios' },
+    ],
     repo: '', // if no repo, the button will not show up
   },
   {
@@ -46,6 +53,12 @@ export const projectsData = [
     info:
       'Is a face recognition app, were you can upload a picture and it will recognize the face.',
     info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'ReactJs' },
+      { id: 4, label: 'Redux' },
+    ],
     url: 'https://jroman2018.github.io/FaceRecognition/',
     repo: '', // if no repo, the button will not show up
   },
@@ -55,6 +68,13 @@ export const projectsData = [
     title: 'Robofriend Api',
     info: "It's an api friendly search api robot.",
     info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'ReactJs' },
+      { id: 4, label: 'Redux' },
+      { id: 5, label: 'Axios' },
+    ],
     url: 'https://jroman2018.github.io/robofriends/',
     repo: '', // if no repo, the button will not show up
   },
@@ -64,6 +84,11 @@ export const projectsData = [
     title: 'Menu',
     info: 'Menu template',
     info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'ReactJs' },
+    ],
     url: 'https://unruffled-joliot-d89c30.netlify.app/',
     repo: '', // if no repo, the button will not show up
   },
@@ -73,6 +98,11 @@ export const projectsData = [
     title: 'Reviews',
     info: "It's a Review card",
     info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'ReactJs' },
+    ],
     url: 'https://suspicious-albattani-f71a26.netlify.app/',
     repo: '', // if no repo, the button will not show up
   },
