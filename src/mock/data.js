@@ -135,7 +135,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'instagram',
-      url: 'https://www.instagram.com/josero1994/',
+      url: 'https://www.instagram.com/joseroynf/',
     },
     {
       id: nanoid(),
@@ -145,7 +145,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'linkedin',
-      url: 'https://www.linkedin.com/in/jose-roman-5497a1194/',
+      url: 'https://www.linkedin.com/in/josé-román-5497a1194/',
     },
   ],
 };
