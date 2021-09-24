@@ -60,7 +60,7 @@ export const projectsData = [
       { id: 4, label: 'Redux' },
     ],
     url: 'https://jroman2018.github.io/FaceRecognition/',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/JRoman2018/FaceRecognition', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -76,7 +76,21 @@ export const projectsData = [
       { id: 5, label: 'Axios' },
     ],
     url: 'https://jroman2018.github.io/robofriends/',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/JRoman2018/robofriends', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'monster-slayer.png',
+    title: 'Monster Slayer Game',
+    info: "It's a Vue.js game figthing against monster.",
+    info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'VueJs' },
+    ],
+    url: 'https://tender-knuth-e6d08b.netlify.app/',
+    repo: 'https://github.com/JRoman2018/Monster-Slayer-Game', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -90,7 +104,7 @@ export const projectsData = [
       { id: 3, label: 'ReactJs' },
     ],
     url: 'https://unruffled-joliot-d89c30.netlify.app/',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/JRoman2018/menu', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -104,7 +118,7 @@ export const projectsData = [
       { id: 3, label: 'ReactJs' },
     ],
     url: 'https://suspicious-albattani-f71a26.netlify.app/',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/JRoman2018/Reviews', // if no repo, the button will not show up
   },
 ];
 

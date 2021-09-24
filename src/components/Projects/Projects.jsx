@@ -39,6 +39,8 @@ const Projects = () => {
         return 'bg-success';
       case 'CSS':
         return 'bg-dark';
+      case 'VueJs':
+        return 'bg-info';
       default:
         return 'bg-secondary';
     }
