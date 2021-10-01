@@ -120,6 +120,20 @@ export const projectsData = [
     url: 'https://suspicious-albattani-f71a26.netlify.app/',
     repo: 'https://github.com/JRoman2018/Reviews', // if no repo, the button will not show up
   },
+  {
+    id: nanoid(),
+    img: 'react-cart.png',
+    title: 'Food Cart',
+    info: "It's a Food Cart, made with useContext, useState, useEffect and ",
+    info2: '',
+    langs: [
+      { id: 1, label: 'CSS' },
+      { id: 2, label: 'JavaScript' },
+      { id: 3, label: 'ReactJs' },
+    ],
+    url: 'https://615723bf0f78c70008b3509f--angry-gates-a1e626.netlify.app/',
+    repo: 'https://github.com/JRoman2018/React-Cart', // if no repo, the button will not show up
+  },
 ];
 
 // CONTACT DATA
