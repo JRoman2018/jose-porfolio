@@ -1,0 +1,62 @@
+@import "../../_globalColor";
+
+.achievement-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+}
+.achievement-subtitle {
+  text-transform: uppercase;
+  margin: 0px;
+  margin-bottom: 50px;
+}
+.subTitle {
+  color: $subTitle;
+}
+
+.show-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+span.achivement-tag {
+  background: $buttonColor;
+  color: $lightBackground3;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 10px;
+  width: 110px;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 3em;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 1rem 0.5rem 0.5rem 0;
+  padding: 0 0.75em;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+span.achivement-tag:hover {
+  background: $buttonHover;
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .achievement-heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .achievement-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .achievement-subtitle {
+    font-size: 16px;
+    line-height: normal;
+    text-align: center;
+  }
+}
