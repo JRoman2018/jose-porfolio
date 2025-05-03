@@ -127,7 +127,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Pontificia Universidad Católica Madre y Maestra",
-      logo: require("./assets/images/pucmmLogo.gif"),
+      logo: require("./assets/images/pucmmLogo.png"),
       subHeader: "Telecommunications Engineering",
       duration: "2012 - 2019",
       desc: "Development in the area of telecommunications engineering.",
@@ -259,7 +259,7 @@ const workExperiences = {
       role: "Full Stack Software Developer",
       company: "Electrical Equipment Supplier",
       bgColor: "#000",
-      companylogo: require("./assets/images/electricalLogo.jpg"),
+      companylogo: require("./assets/images/electricalLogo.png"),
       date: "Jun. 2020 - May. 2021",
       desc: "Designed, developed, tested, and deployed applications for the country’s electrical industry. Developed the frontend of web applications with React. Created web APIs with ASP.NET Core for the automation of electrical substations. Utilized Redux and RESTful APIs. At Electrical Equipment Supplier my primary focus was on creating interactive and dynamic frontend solutions using React and managing application state efficiently with Redux. I also developed robust and scalable web APIs using ASP.NET Core, enabling the automation of electrical substation processes. I collaborated closely with backend engineers to seamlessly integrate RESTful APIs, enabling smooth data exchange and real-time updates. Additionally, I participated in the full software development lifecycle, including testing, debugging, and deployment, to ensure reliable and maintainable solutions.",
       descBullets: [
