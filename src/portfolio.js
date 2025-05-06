@@ -298,32 +298,215 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Professional Projects",
+  subtitle:
+    "A look into the products and startups I’ve helped shape through code.",
   projects: [
     {
-      image: require("./assets/images/realtyLogo.webp"),
-      projectName: "Realtor Pro",
-      projectDesc:
+      medias: [
+        require("./assets/images/realtor-pro/image1.png"),
+        require("./assets/images/realtor-pro/image2.png"),
+        require("./assets/images/realtor-pro/image3.png"),
+        require("./assets/images/realtor-pro/image4.png"),
+        require("./assets/images/realtor-pro/image5.png")
+      ],
+      title: "Realtor Pro",
+      description:
         "This project is a web application developed with ReactJS to manage and track sales statistics for properties (lots, houses, apartments, etc.). It allows users to record, query, and analyze sales data to gain valuable insights into business performance.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://realtydominicana.com/"
-        }
-      ]
+      technologies: [
+        "React",
+        "JavaScript",
+        "Typescript",
+        "Next.js",
+        "Redux",
+        "Nestjs",
+        "Express.js",
+        "Jest",
+        "Material UI",
+        "Twilio",
+        "MySQL"
+      ],
+      requestDemo: true,
+      size: "large"
     },
     {
-      image: require("./assets/images/pulsearaLogo.webp"),
-      projectName: "Pulseara",
-      projectDesc:
+      medias: [
+        require("./assets/images/pulseara/image1.png"),
+        require("./assets/images/pulseara/image2.png"),
+        require("./assets/images/pulseara/image3.png")
+      ],
+      title: "Pulseara",
+      description:
         "This application is designed to streamline medical practice operations by enabling healthcare providers to manage patient records, create consultations, track allergies and active conditions, add important notes, and store patient images. It also facilitates office management by allowing the creation of staff accounts, managing medication lists, generating printable documents, creating prescriptions, and handling insurance claims.  Future updates include features for service invoicing, office statistics, digital marketing, form creation, appointment scheduling, and patient queue management.",
-      footerLink: [
-        {
-          name: "Visit Website",
-          url: "https://www.pulseara.com/"
-        }
-      ]
+      technologies: [
+        "React",
+        "JavaScript",
+        "Electron",
+        "AWS",
+        "Material UI",
+        "Jest"
+      ],
+      liveDemoUrl: "https://www.pulseara.com/",
+      size: "large"
+    },
+    {
+      medias: [
+        require("./assets/videos/globalProf/onboarding_process.mp4"),
+        require("./assets/videos/globalProf/admin_panel.mp4")
+      ],
+      title: "GlobalProf",
+      description:
+        "This application is designed to streamline medical practice operations by enabling healthcare providers to manage patient records, create consultations, track allergies and active conditions, add important notes, and store patient images. It also facilitates office management by allowing the creation of staff accounts, managing medication lists, generating printable documents, creating prescriptions, and handling insurance claims.  Future updates include features for service invoicing, office statistics, digital marketing, form creation, appointment scheduling, and patient queue management.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "Typescript",
+        "AWS",
+        "Material UI",
+        "Jest",
+        "MySQL"
+      ],
+      requestDemo: true,
+      size: "large"
+    },
+    {
+      medias: [
+        require("./assets/images/caldo/image1.png"),
+        require("./assets/images/caldo/image2.png"),
+        require("./assets/images/caldo/image3.png"),
+        require("./assets/images/caldo/image4.png"),
+        require("./assets/images/caldo/image5.png"),
+        require("./assets/images/caldo/image6.png"),
+        require("./assets/images/caldo/image7.png"),
+        require("./assets/images/caldo/image8.png")
+      ],
+      title: "Caldo App",
+      description:
+        "Developed a scalable mobile learning application using React Native for both iOS and Android platforms, designed to support millions of users. Built a dynamic, with smart caching mechanisms to efficiently manage and update thousands of course materials in real time. Led a cross-functional team of front-end and back-end developers, coordinating task distribution, maintaining development velocity, and ensuring on-time project delivery.",
+      technologies: [
+        "React Native",
+        "JavaScript",
+        "Typescript",
+        "Material UI",
+        "MySQL",
+        "Jest"
+      ],
+      requestDemo: true,
+      size: "large"
+    },
+    {
+      medias: [
+        require("./assets/images/city_skyline/image1.png"),
+        require("./assets/images/city_skyline/image2.png")
+      ],
+      title: "City Skyline",
+      description:
+        "This project creates a responsive animated city skyline using pure HTML and CSS. It visually represents a layered urban skyline scene with foreground and background buildings, designed using nested <div> elements and custom CSS classes.",
+      technologies: ["HTML", "CSS"],
+      githubUrl:
+        "https://github.com/JRoman2018/css-variables-by-building-a-city-skyline",
+      liveDemoUrl:
+        "https://css-variables-by-building-a-city-skyline.vercel.app/",
+      size: "small"
+    },
+    {
+      medias: [require("./assets/images/css_pinguin/image.png")],
+      title: "CSS Penguin",
+      description: `This project creates a cute cartoon penguin using only HTML and CSS. It features a stylized scene with mountains, a sun, and a hand-crafted penguin wearing a shirt that says "I 💜 CSS".`,
+      technologies: ["HTML", "CSS"],
+      githubUrl:
+        "https://github.com/JRoman2018/css-transform-building-a-penguin",
+      liveDemoUrl: "https://css-transform-building-a-penguin.vercel.app/",
+      size: "small"
+    },
+    {
+      medias: [require("./assets/images/redux-cart/image.png")],
+      title: "Redux Cart",
+      description:
+        "Built a robust and responsive e-commerce cart solution using React and Redux, enabling users to manage products with real-time state updates. Implemented features like dynamic item quantity control, persistent state via localStorage, and a fully modular cart architecture suitable for integration into larger applications. Focused on code scalability and performance, ensuring seamless UX across devices.",
+      technologies: ["HTML", "CSS", "React", "Redux"],
+      githubUrl: "https://github.com/JRoman2018/redux-cart",
+      liveDemoUrl:
+        "https://617ad74144cf641f05480ff1--objective-varahamihira-1ddfca.netlify.app/",
+      size: "medium"
+    },
+    {
+      medias: [require("./assets/images/monster-slayer-game/image1.png")],
+      title: "Monster Slayer Game",
+      description:
+        "Built an interactive turn-based combat game using Vue 3, featuring a player vs. monster mechanic with dynamic health bars, special attacks, healing, and surrender logic. Implemented game rounds with conditional logic to determine outcomes (win, lose, draw) and a reactive UI powered by Vue’s data, methods, computed, and watchers. Incorporated random value generation for attack and heal dynamics, along with a real-time action log to track gameplay events. Designed for learning Vue reactivity and user interface feedback through animations and state management.",
+      technologies: ["Vue", "Javascript"],
+      githubUrl:
+        "https://github.com/JRoman2018/Monster-Slayer-Game/tree/master",
+      liveDemoUrl: "https://tender-knuth-e6d08b.netlify.app/",
+      size: "medium"
+    },
+    {
+      medias: [require("./assets/images/stripe-submenu/image.png")],
+      title: "Stripe Dynamic Submenu",
+      description:
+        "Created a dynamic and position-aware submenu component using React and the Context API to manage global state. The submenu adapts its layout based on the number of navigation links, adjusting between 2 to 4 column layouts dynamically. Leveraged useRef and useEffect hooks to calculate and set the submenu's exact screen position (left and top) based on user interaction. Built with scalability and clean UI in mind, making it ideal for use in responsive web applications with complex navigation needs.",
+      technologies: ["React", "Javascript"],
+      githubUrl: "https://github.com/JRoman2018/stripe-submenu",
+      liveDemoUrl: "https://trusting-euler-7a34e4.netlify.app/",
+      size: "medium"
+    },
+    {
+      medias: [
+        require("./assets/images/grocery-app/image1.png"),
+        require("./assets/images/grocery-app/image2.png"),
+        require("./assets/images/grocery-app/image3.png"),
+        require("./assets/images/grocery-app/image4.png")
+      ],
+      title: "Grocery List App (CRUD)",
+      description:
+        "Built a simple yet fully functional grocery list application using React, featuring CRUD operations with local storage persistence. Users can add, edit, and delete items with real-time alerts powered by a contextual alert system. Integrated localStorage to maintain data across sessions and designed intuitive form interactions for an improved user experience. Implemented controlled components with useState and useEffect to manage application state and side effects, ensuring data integrity and responsive UI behavior.",
+      technologies: ["React", "Javascript", "CSS"],
+      githubUrl: "https://github.com/JRoman2018/Grocery-Bud/tree/main",
+      liveDemoUrl: "https://boring-torvalds-1674f9.netlify.app/",
+      size: "medium"
+    },
+    {
+      medias: [
+        require("./assets/images/color-generator/image1.png"),
+        require("./assets/images/color-generator/image2.png")
+      ],
+      title: "Color Generator",
+      description:
+        "Developed an interactive color palette generator using React and the Values.js library. The application allows users to input a base color and dynamically generate shades and tints by specifying a division factor. Implemented robust error handling for invalid inputs and ensured responsive state updates using useState. The generated palette is rendered using reusable SingleColor components, providing a clean UI and user-friendly experience for designers or developers needing color schemes.",
+      technologies: ["React", "Javascript", "CSS"],
+      githubUrl: "https://github.com/JRoman2018/color-generator",
+      liveDemoUrl: "https://xenodochial-einstein-7aef09.netlify.app/",
+      size: "medium"
+    },
+    {
+      medias: [
+        require("./assets/images/real-state/image1.png"),
+        require("./assets/images/real-state/image2.png"),
+        require("./assets/images/real-state/image3.png"),
+        require("./assets/images/real-state/image4.png")
+      ],
+      title: "Real State template",
+      description:
+        "Designed and developed a modern, fully responsive real estate website template using HTML5 and CSS3, ideal for agencies or independent realtors. The template includes a clean, intuitive layout featuring a hero section with a full-width background image or video, property listings with grid and list views, and a search/filter form to help users find properties by location, price, size, or type.",
+      technologies: ["HTML", "CSS"],
+      githubUrl: "https://github.com/JRoman2018/Bienes-Raices-blog",
+      liveDemoUrl: "https://dreamy-meninsky-307469.netlify.app/",
+      size: "small"
+    },
+    {
+      medias: [
+        require("./assets/images/coffe-blog/image1.png"),
+        require("./assets/images/coffe-blog/image2.png"),
+        require("./assets/images/coffe-blog/image3.png")
+      ],
+      title: "Coffe Blog template",
+      description:
+        "Designed and developed a clean, visually rich coffee-themed blog template using HTML5 and CSS3, tailored for bloggers, coffee enthusiasts, or small café websites. The template emphasizes warm tones, elegant typography, and a magazine-style layout to enhance content readability and engagement.",
+      technologies: ["HTML", "CSS"],
+      githubUrl: "https://github.com/JRoman2018/Bienes-Raices-blog",
+      liveDemoUrl: "https://dreamy-meninsky-307469.netlify.app/",
+      size: "small"
     }
   ],
   display: true // Set false to hide this section, defaults to true
