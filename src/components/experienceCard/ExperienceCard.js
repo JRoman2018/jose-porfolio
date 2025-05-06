@@ -87,7 +87,7 @@ const ExperienceCard = ({cardInfo, isDark}) => {
         >
           {cardInfo.date}
         </h5>
-        {cardInfo.desc.length > 150 && ( // Example condition, adjust as needed
+        {cardInfo.desc.length > 150 && (
           <span
             className={isDark ? "dark-mode experience-tag" : "experience-tag"}
             onClick={() => setIsExpanded(!isExpanded)}
@@ -99,7 +99,7 @@ const ExperienceCard = ({cardInfo, isDark}) => {
           ref={descRef}
           className="relative overflow-hidden"
           style={{
-            height: isExpanded ? descHeight : "2.4em", // 2.4em for 2 lines, or use a more robust calculation
+            height: isExpanded ? descHeight : "2.4em",
             transition: "height 0.3s ease-out",
             overflow: "hidden"
           }}

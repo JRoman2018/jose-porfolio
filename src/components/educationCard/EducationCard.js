@@ -5,20 +5,22 @@ import StyleContext from "../../contexts/StyleContext";
 
 export default function EducationCard({school}) {
   const imgRef = createRef();
+  const {isDark} = useContext(StyleContext);
 
   const GetDescBullets = ({descBullets}) => {
     return descBullets
       ? descBullets.map((item, i) => (
-          <li key={i} className="subTitle">
+          <li key={i} className="education-text-desc">
             {item}
           </li>
         ))
       : null;
   };
-  const {isDark} = useContext(StyleContext);
 
-  if (!school.logo)
+  if (!school.logo) {
     console.error(`Image of ${school.name} is missing in education section`);
+  }
+
   return (
     <div>
       <Fade left duration={1000}>

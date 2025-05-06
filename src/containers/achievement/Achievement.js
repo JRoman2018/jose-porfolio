@@ -5,10 +5,16 @@ import {achievementSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 
+const MAX_VISIBLE = 5;
+
 export default function Achievement() {
   const {isDark} = useContext(StyleContext);
-  const [achievementsToShow, setAchievementsToShow] = useState(5);
-  const initialCount = 5;
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = achievementSection.achievementsCards.length > MAX_VISIBLE;
+
+  const visible = expanded
+    ? achievementSection.achievementsCards
+    : achievementSection.achievementsCards.slice(0, MAX_VISIBLE);
 
   if (!achievementSection.display) {
     return null;
@@ -39,9 +45,10 @@ export default function Achievement() {
             </p>
           </div>
           <div className="achievement-cards-div">
-            {achievementSection.achievementsCards
-              .slice(0, achievementsToShow)
-              .map((card, i) => {
+            {visible.length === 0 ? (
+              <p className="no-projects-message">No achivement found.</p>
+            ) : (
+              visible.map((card, i) => {
                 return (
                   <AchievementCard
                     key={i}
@@ -55,23 +62,19 @@ export default function Achievement() {
                     }}
                   />
                 );
-              })}
+              })
+            )}
           </div>
           <div className="show-button-container">
-            {achievementSection.achievementsCards.length > initialCount && (
-              <span
-                className={isDark ? "dark-mode achivement-tag" : "achivement-tag"} // You can style this button
-                onClick={() =>
-                  setAchievementsToShow(
-                    achievementSection.achievementsCards.length
-                  )
-                }
-              >
-                {achievementsToShow ===
-                achievementSection.achievementsCards.length
-                  ? "Show Less"
-                  : "Show More"}
-              </span>
+            {hasMore && (
+              <div className="projects__toggle">
+                <button
+                  className="projects__toggle-button"
+                  onClick={() => setExpanded(!expanded)}
+                >
+                  {expanded ? "View Less" : "View More"}
+                </button>
+              </div>
             )}
           </div>
         </div>
