@@ -58,12 +58,14 @@ function ProjectCard({
                   >
                     <video
                       className="card-video"
-                      src={medias[currentIndex]}
+                      controls
                       autoPlay
                       muted
                       loop
                       playsInline
-                    />
+                    >
+                      <source src={medias[currentIndex]} type="video/mp4" />
+                    </video>
                     <div className="video-overlay">🔍</div>
                   </div>
                   {isModalOpen && (
