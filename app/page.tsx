@@ -70,19 +70,19 @@ export default function Portfolio() {
         <HeroSection />
 
         {/* About Me Section */}
-        {/* <AboutMeSection /> */}
+        <AboutMeSection />
 
         {/* Skills Section */}
-        {/* <SkillSection /> */}
+        <SkillSection />
 
         {/* Projects Section */}
-        {/* <ProjectSection /> */}
+        <ProjectSection />
 
         {/* Testimonials Section */}
         {/* <TestimonialsSection /> */}
 
         {/* Contact Section */}
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
 
       {/* Footer */}
