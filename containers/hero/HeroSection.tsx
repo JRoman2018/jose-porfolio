@@ -74,7 +74,7 @@ const HeroSection = () => {
               src="/profile.JPG"
               alt={contactInfo.name}
               fill
-              className=""
+              className="object-cover"
               priority
             />
           </div>
