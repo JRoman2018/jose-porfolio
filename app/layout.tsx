@@ -22,7 +22,7 @@ export default function RootLayout({
 }
 
 export const metadata = {
-  title: "José Román Portfolio",
+  title: "José Román | Portfolio",
   icons: {
     icon: "/favicon.ico",
   },
