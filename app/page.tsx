@@ -16,7 +16,7 @@ import HeaderSection from "@/containers/header/HeaderSection";
 export default function Portfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [cursorEnabled, setCursorEnabled] = useState(true);
+  const [cursorEnabled, setCursorEnabled] = useState(false);
 
   // Fix hydration issues with theme
   useEffect(() => {
