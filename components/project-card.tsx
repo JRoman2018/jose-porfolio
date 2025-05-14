@@ -1,25 +1,55 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Project } from "@/app/types";
+import type { Project } from "@/app/types";
 
 const ProjectCard: FC<{ project: Project; index: number }> = ({
   project,
   index,
 }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
+  // Lazy load images when they come into view
   useEffect(() => {
-    if (project.images.length <= 1) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        observer.unobserve(cardRef.current);
+      }
+    };
+  }, []);
+
+  // Image carousel functionality
+  useEffect(() => {
+    if (!isVisible || project.images.length <= 1) return;
+
     const interval = setInterval(() => {
       setCurrentImage((prevIndex) => (prevIndex + 1) % project.images.length);
+      // Reset image loaded state when changing images
+      setImageLoaded(false);
     }, 10000);
+
     return () => clearInterval(interval);
-    // eslint-disable-next-line
-  }, [project.images]);
+  }, [project.images, isVisible]);
 
   const onClickAction = () => {
     if (project.request_demo) {
@@ -32,24 +62,52 @@ const ProjectCard: FC<{ project: Project; index: number }> = ({
     }
   };
 
+  // Preload the next image in the carousel
+  useEffect(() => {
+    if (!isVisible || project.images.length <= 1) return;
+
+    const nextImageIndex = (currentImage + 1) % project.images.length;
+    const nextImageUrl = project.images[nextImageIndex];
+
+    if (nextImageUrl) {
+      const imgElement = document.createElement("img");
+      imgElement.src = nextImageUrl;
+    }
+  }, [currentImage, project.images, isVisible]);
+
   return (
     <motion.div
+      ref={cardRef}
       layout
       key={project.id}
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.5, delay: 0.05 * (index % 3) }}
       whileHover={{ y: -10 }}
       className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
     >
-      <div className="relative h-56 overflow-hidden">
-        <Image
-          src={project.images?.[currentImage] || "/placeholder.svg"}
-          alt={`${project.title} image ${currentImage + 1}`}
-          fill
-          className="object-contain transition-transform duration-500"
-        />
+      <div className="relative h-56 overflow-hidden bg-gray-200 dark:bg-gray-800">
+        {/* Skeleton loader */}
+        {(!isVisible || !imageLoaded) && (
+          <div className="absolute inset-0 bg-gray-200 dark:bg-gray-800 animate-pulse" />
+        )}
+
+        {/* Only render image when card is visible */}
+        {isVisible && (
+          <Image
+            src={project.images?.[currentImage] || "/placeholder.svg"}
+            alt={`${project.title} image ${currentImage + 1}`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={index < 3} // Only prioritize first 3 images
+            loading={index < 3 ? "eager" : "lazy"}
+            className={`object-contain transition-transform duration-500 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+            onLoad={() => setImageLoaded(true)}
+          />
+        )}
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -75,12 +133,15 @@ const ProjectCard: FC<{ project: Project; index: number }> = ({
         </div>
 
         {/* Carousel Dots */}
-        {project.images.length > 1 && (
+        {isVisible && project.images.length > 1 && (
           <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
             {project.images?.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrentImage(i)}
+                onClick={() => {
+                  setCurrentImage(i);
+                  setImageLoaded(false);
+                }}
                 className={`w-2.5 h-2.5 rounded-full transition ${
                   i === currentImage
                     ? "bg-white"

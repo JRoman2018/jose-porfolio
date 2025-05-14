@@ -32,4 +32,6 @@ export interface ContactInfo {
   linkedin: string;
   github: string;
   address: string;
+  phone?: string;
+  whatsapp: string;
 }
