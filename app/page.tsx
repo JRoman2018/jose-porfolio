@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { CustomCursor } from "@/components/custom-cursor";
 import ContactSection from "@/containers/contact/ContactSection";
-import TestimonialsSection from "@/containers/testimonials/TestimonialsSection";
 import FooterSection from "@/containers/footer/FooterSection";
 import ProjectSection from "@/containers/project/ProjectSection";
 import SkillSection from "@/containers/skill/SkillSection";
