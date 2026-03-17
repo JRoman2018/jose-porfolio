@@ -27,13 +27,15 @@ const ProjectCard: FC<{ project: Project; index: number }> = ({
       { threshold: 0.1 }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
+    const cardElement = cardRef.current;
+
+    if (cardElement) {
+      observer.observe(cardElement);
     }
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (cardElement) {
+        observer.unobserve(cardElement);
       }
     };
   }, []);

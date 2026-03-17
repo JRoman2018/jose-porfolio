@@ -78,7 +78,7 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
                   <p className="text-muted-foreground italic">
-                    "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                   </p>
                 </CardContent>
               </motion.div>

@@ -242,7 +242,7 @@ const ContactSection = () => {
                     as="h2"
                     className="text-3xl md:text-4xl font-bold tracking-tight"
                   >
-                    Let's start a conversation
+                    Let&apos;s start a conversation
                   </AnimatedText>
                 </div>
 
@@ -252,7 +252,7 @@ const ContactSection = () => {
                   className="text-gray-600 dark:text-gray-400 mb-8 text-lg"
                 >
                   Have a project in mind or want to explore opportunities for
-                  collaboration? I'd love to hear from you.
+                  collaboration? I&apos;d love to hear from you.
                 </AnimatedText>
 
                 <div className="space-y-6 mb-10">

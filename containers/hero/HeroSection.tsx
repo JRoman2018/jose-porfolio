@@ -99,7 +99,7 @@ const HeroSection = () => {
               as="h1"
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight"
             >
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="text-emerald-600 dark:text-emerald-500 relative inline-block">
                 {contactInfo.name}
                 <motion.span

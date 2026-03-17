@@ -222,8 +222,9 @@ export function ProjectFilter() {
                 ? ` ${activeComplexity.toLowerCase()}`
                 : ""}
               {activeFilter !== "All" ? ` ${activeFilter}` : ""}
-              project{filteredProjects.length !== 1 ? "s" : ""} matching "
-              {searchTerm}"
+              project{filteredProjects.length !== 1 ? "s" : ""} matching
+              {" "}
+              &quot;{searchTerm}&quot;
             </p>
           ) : activeFilter === "All" && activeComplexity === "All" ? (
             <p>Showing all {filteredProjects.length} projects</p>
